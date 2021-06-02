@@ -1,0 +1,49 @@
+<head>
+
+<script>
+    function computerPlay(){
+        var randomNum = Math.random() *100
+        var roundRandNum = Math.floor(randomNum);
+    if(roundRandNum >= 0 && roundRandNum <=33){
+        return "rock";
+    }
+        else if(roundRandNum >= 34 && roundRandNum <=66){
+            return "paper";
+        }
+        else{
+            return "scissors";
+        }
+        }
+    
+    function humanPlay(){
+        var userInput = prompt("Let's play Rock, paper, scissors! Type in your selection in the box below.")
+        var usableInput = userInput.toLowerCase();
+      return usableInput;
+        }
+
+    
+    
+    
+    function play(playerSelection, computerSelection){
+        playerSelection = humanPlay();
+        computerSelection = computerPlay();
+        
+        if (playerSelection === "rock" && computerSelection === "scissors"){
+            return "Rock breaks Scissors, you win! :D"
+        }
+        else if(playerSelection === "paper" && computerSelection === "rock"){
+            return "Paper covers rock, you win! :D"
+        }
+        else if(playerSelection === "scissors" && computerSelection === "paper"){
+            return "Scissors cut paper, you win! :D"
+    }
+}
+    
+console.log(play());   
+    </script>
+
+    </head>
+<body>
+
+
+</body>
